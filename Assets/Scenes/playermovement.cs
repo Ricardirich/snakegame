@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Snakemovement : MonoBehaviour
+public class playermovement : MonoBehaviour
 {
     public float speed = 1f;
     Rigidbody2D myRB;
     Vector3 dir = new Vector3(0, 0, 0);
 
-    public int Playernumber = 1;
+    public int Playernumber = 2;
     private enum GameState { Playing, Paused, GameOver }
     private GameState currentState;
 
@@ -46,14 +46,14 @@ public class Snakemovement : MonoBehaviour
     {
         Vector3 v = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.I))
         { v += Vector3.up; }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.K))
         { v += Vector3.down; }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.L))
         { v += Vector3.right; }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.J))
         { v += Vector3.left; }
 
         return v;
