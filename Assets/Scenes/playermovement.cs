@@ -69,7 +69,7 @@ public class playermovement : MonoBehaviour
     {
         if (other.CompareTag("Food"))
         {
-            GameManager.Instance.AddScore(Playernumber, 2);
+            GameManager.Instance.AddScore(Playernumber, 5);
             
         }
         else if (other.CompareTag("Wall") || other.CompareTag("Player"))
